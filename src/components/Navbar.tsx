@@ -13,18 +13,18 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Loan Products', path: '/loan-products', dropdown: true },
-    { name: 'Loan Suggestion', path: '/loan-suggestion' },
-    { name: 'Resources', path: '/resources' },
-    { name: 'About Us', path: '/about' },
+    { name: 'Home', path: '/FinTech/' },
+    { name: 'Loan Products', path: '/FinTech/loan-products', dropdown: true },
+    { name: 'Loan Suggestion', path: '/FinTech/loan-suggestion' },
+    { name: 'Resources', path: '/FinTech/resources' },
+    { name: 'About Us', path: '/FinTech/about' },
   ];
 
   const productLinks = [
-    { name: 'Personal Loans', path: '/loan-products#personal' },
-    { name: 'Home Loans', path: '/loan-products#home' },
-    { name: 'Auto Loans', path: '/loan-products#auto' },
-    { name: 'Business Loans', path: '/loan-products#business' },
+    { name: 'Personal Loans', path: '/FinTech/loan-products#personal' },
+    { name: 'Home Loans', path: '/FinTech/loan-products#home' },
+    { name: 'Auto Loans', path: '/FinTech/loan-products#auto' },
+    { name: 'Business Loans', path: '/FinTech/loan-products#business' },
   ];
 
   return (
@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/FinTech" className="flex items-center space-x-2">
             <DollarSign className="w-8 h-8 text-primary-600" />
             <span className="text-xl font-bold text-primary-800">FinTech</span>
           </Link>
@@ -85,10 +85,10 @@ const Navbar = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link to="/dashboard" className="btn-outline btn-sm py-1.5 px-3 rounded-md">
+            <Link to="/FinTech/Login" className="btn-outline btn-sm py-1.5 px-3 rounded-md">
               Login
             </Link>
-            <Link to="/apply" className="btn-primary btn-sm py-1.5 px-3 rounded-md">
+            <Link to="/FinTech/apply" className="btn-primary btn-sm py-1.5 px-3 rounded-md">
               Apply Now
             </Link>
           </div>
@@ -160,14 +160,14 @@ const Navbar = () => {
           <div className="pt-4 pb-3 border-t border-secondary-200">
             <div className="flex items-center px-5 space-x-3">
               <Link 
-                to="/dashboard" 
+                to="/FinTech/Login" 
                 className="w-full px-4 py-2 text-base font-medium text-center text-primary-600 bg-white border border-primary-600 rounded-md hover:bg-primary-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Login
               </Link>
               <Link 
-                to="/apply" 
+                to="/FinTech/apply" 
                 className="w-full px-4 py-2 text-base font-medium text-center text-white bg-primary-600 rounded-md hover:bg-primary-700"
                 onClick={() => setIsMenuOpen(false)}
               >

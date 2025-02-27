@@ -33,7 +33,7 @@ const HomePage = () => {
       <section className="section bg-white">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="section-title">Why Choose USA Financial?</h2>
+            <h2 className="section-title">Why Choose FinTech?</h2>
             <p className="section-subtitle">
               We offer a range of benefits designed to make your financial journey smooth and successful.
             </p>
@@ -230,7 +230,7 @@ const HomePage = () => {
                 <Star className="w-5 h-5 fill-current" />
               </div>
               <p className="text-secondary-600 mb-4 italic">
-                "The loan application process was incredibly smooth. I got approved quickly and the terms were better than I expected. USA Financial made financing my new home a breeze!"
+                "The loan application process was incredibly smooth. I got approved quickly and the terms were better than I expected. FinTech made financing my new home a breeze!"
               </p>
               <div className="flex items-center">
                 <img 
@@ -254,7 +254,7 @@ const HomePage = () => {
                 <Star className="w-5 h-5 fill-current" />
               </div>
               <p className="text-secondary-600 mb-4 italic">
-                "As a small business owner, I needed capital to expand. USA Financial understood my vision and provided a business loan with terms that worked perfectly for my growth plans."
+                "As a small business owner, I needed capital to expand. FinTech understood my vision and provided a business loan with terms that worked perfectly for my growth plans."
               </p>
               <div className="flex items-center">
                 <img 
@@ -302,7 +302,7 @@ const HomePage = () => {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-title">Ready to Get Started?</h2>
             <p className="section-subtitle mb-8">
-              Apply now and take the first step toward achieving your financial goals with USA Financial.
+              Apply now and take the first step toward achieving your financial goals with FinTech.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Link to="/apply" className="btn btn-primary">
