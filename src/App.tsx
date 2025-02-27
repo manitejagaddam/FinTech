@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import LoanProductsPage from './pages/LoanProductsPage';
 import LoanSuggestionTool from './pages/LoanSuggestionTool';
-// import ApplicationForm from './pages/ApplicationForm';
-import Login from './pages/login';
+import ApplicationForm from './pages/ApplicationForm';
+import Login from './pages/Login';
 import Resources from './pages/Resources';
-// import AboutUs from './pages/AboutUs';
-// import NotFound from './pages/NotFound';
+import AboutUs from './pages/Aboutus';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -24,8 +24,8 @@ function App() {
             {/* <Route path="/FinTech/apply" element={<ApplicationForm />} /> */}
             <Route path="/FinTech/login/*" element={<Login />} />
             <Route path="/FinTech/resources" element={<Resources />} />
-            {/* <Route path="/FinTech/about" element={<AboutUs />} />
-            <Route path="*" element={<NotFound />} /> */}
+            <Route path="/FinTech/about" element={<AboutUs />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </main>
         <Footer />
