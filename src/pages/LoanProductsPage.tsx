@@ -23,7 +23,7 @@ const LoanProductsPage = () => {
       <section className="bg-primary-800 text-white py-16">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Loan Products</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
             <p className="text-xl text-primary-100 mb-8">
               Explore our comprehensive range of loan options designed to meet your unique financial needs.
             </p>
@@ -419,7 +419,7 @@ const LoanProductsPage = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="section-title">Loan Comparison</h2>
             <p className="section-subtitle">
-              Compare our loan products to find the best option for your needs.
+              Compare our Services to find the best option for your needs.
             </p>
           </div>
 
@@ -484,7 +484,7 @@ const LoanProductsPage = () => {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="section-title">Frequently Asked Questions</h2>
             <p className="section-subtitle">
-              Find answers to common questions about our loan products.
+              Find answers to common questions about our Services.
             </p>
           </div>
 

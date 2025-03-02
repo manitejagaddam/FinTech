@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, DollarSign } from 'lucide-react';
 
@@ -14,17 +14,17 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/FinTech/' },
-    { name: 'Loan Products', path: '/FinTech/loan-products', dropdown: true },
+    { name: 'Services', path: '/FinTech/services', dropdown: true },
     { name: 'Loan Suggestion', path: '/FinTech/loan-suggestion' },
     { name: 'Resources', path: '/FinTech/resources' },
     { name: 'About Us', path: '/FinTech/about' },
   ];
 
   const productLinks = [
-    { name: 'Personal Loans', path: '/FinTech/loan-products#personal' },
-    { name: 'Home Loans', path: '/FinTech/loan-products#home' },
-    { name: 'Auto Loans', path: '/FinTech/loan-products#auto' },
-    { name: 'Business Loans', path: '/FinTech/loan-products#business' },
+    { name: 'Personal Loans', path: '/FinTech/services#personal' },
+    { name: 'Home Loans', path: '/FinTech/services#home' },
+    { name: 'Auto Loans', path: '/FinTech/services#auto' },
+    { name: 'Business Loans', path: '/FinTech/services#business' },
   ];
 
   return (

@@ -46,7 +46,7 @@ const HomePage = () => {
                 <h3 className="text-xl font-semibold">Competitive Rates</h3>
               </div>
               <p className="text-secondary-600">
-                Our loan products feature some of the most competitive interest rates in the market, helping you save money over time.
+                Our Services feature some of the most competitive interest rates in the market, helping you save money over time.
               </p>
             </div>
 
@@ -103,11 +103,11 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Loan Products Preview */}
+      {/* Services Preview */}
       <section className="section bg-secondary-50">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="section-title">Explore Our Loan Products</h2>
+            <h2 className="section-title">Explore Our Services</h2>
             <p className="section-subtitle">
               We offer a variety of loan options to meet your specific needs and financial goals.
             </p>
@@ -177,7 +177,7 @@ const HomePage = () => {
 
           <div className="text-center mt-10">
             <Link to="/loan-products" className="btn btn-primary">
-              View All Loan Products
+              View All Services
             </Link>
           </div>
         </div>

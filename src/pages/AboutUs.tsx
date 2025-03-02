@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardContent } from "../components/ui/Card";
 
@@ -64,7 +64,7 @@ const About = () => {
               className="w-32 h-32 mx-auto rounded-full"
             />
             <CardHeader>
-              <h3 className="text-xl font-semibold text-primary-700">Maniteja Gaddam</h3>
+              <h3 className="text-xl font-semibold text-primary-700">Sharukh</h3>
               <p className="text-secondary-600">CEO & Founder</p>
             </CardHeader>
           </Card>

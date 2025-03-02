@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,7 +19,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/FinTech/" element={<HomePage />} />
-            <Route path="/FinTech/loan-products" element={<LoanProductsPage />} />
+            <Route path="/FinTech/services" element={<LoanProductsPage />} />
             <Route path="/FinTech/loan-suggestion" element={<LoanSuggestionTool />} />
             {/* <Route path="/FinTech/apply" element={<ApplicationForm />} /> */}
             <Route path="/FinTech/login/*" element={<Login />} />
