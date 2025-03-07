@@ -317,7 +317,7 @@ const Navbar = ({ user, signOut }) => {
           {/* Logo */}
           <Link to="/FinTech" className="flex items-center space-x-2">
             <DollarSign className="w-8 h-8 text-primary-600" />
-            <span className="text-xl font-bold text-primary-800">FinTech</span>
+            <span className="text-xl font-bold text-primary-800">Lona Lona</span>
           </Link>
 
           {/* Desktop Navigation */}
