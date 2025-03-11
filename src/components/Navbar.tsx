@@ -301,9 +301,13 @@ const Navbar = ({ user, signOut }) => {
     { name: 'Loan Suggestion', path: '/FinTech/loan-suggestion' },
     { name: 'Resources', path: '/FinTech/resources' },
     { name: 'About Us', path: '/FinTech/about' },
+    { name: 'Dashboard', path: '/FinTech/dashboard' },
+    
   ];
 
   const productLinks = [
+    
+    { name: 'Dashboard', path: '/FinTech/services#dashboard' },
     { name: 'Personal Loans', path: '/FinTech/services#personal' },
     { name: 'Home Loans', path: '/FinTech/services#home' },
     { name: 'Auto Loans', path: '/FinTech/services#auto' },

@@ -44,7 +44,8 @@ const DashboardLayout: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Top Navigation Bar */}
-      <nav className="bg-white shadow-sm border-b border-gray-200">
+      
+      {/* <nav className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
@@ -56,9 +57,9 @@ const DashboardLayout: React.FC = () => {
               </div>
             </div>
             
-            <div className="hidden sm:ml-6 sm:flex sm:items-center">
+            <div className="hidden sm:ml-6 sm:flex sm:items-center"> */}
               {/* Notifications */}
-              <div className="relative ml-3">
+              {/* <div className="relative ml-3">
                 <button
                   type="button"
                   className="relative p-1 rounded-full text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -93,9 +94,9 @@ const DashboardLayout: React.FC = () => {
                   </div>
                 )}
               </div>
-              
+               */}
               {/* Profile dropdown */}
-              <div className="relative ml-3">
+              {/* <div className="relative ml-3">
                 <button
                   type="button"
                   className="flex items-center max-w-xs text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -146,9 +147,9 @@ const DashboardLayout: React.FC = () => {
             </div>
           </div>
         </div>
-        
+         */}
         {/* Mobile menu */}
-        {mobileMenuOpen && (
+        {/* {mobileMenuOpen && (
           <div className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
@@ -179,7 +180,7 @@ const DashboardLayout: React.FC = () => {
             </div>
           </div>
         )}
-      </nav>
+      </nav> */}
 
       <div className="flex">
         {/* Sidebar for desktop */}

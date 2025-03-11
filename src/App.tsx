@@ -13,6 +13,8 @@ import LoanProductsPage from './pages/LoanProductsPage';
 import LoanSuggestionTool from './pages/LoanSuggestionTool';
 import Resources from './pages/Resources';
 import AboutUs from './pages/AboutUs';
+// import Dashboard from './pages/Dashborad';
+// import Dashboard from './dashboard/DashboardHome';
 
 // Dashboard Components
 import DashboardHome from './components/dashboard/DashboardHome';
@@ -60,6 +62,7 @@ function App() {
               <Route path="/FinTech/loan-suggestion" element={<LoanSuggestionTool />} />
               <Route path="/FinTech/resources" element={<Resources />} />
               <Route path="/FinTech/about" element={<AboutUs />} />
+              {/* <Route path="/FinTech/dashboard" element={<DashboardHome />} /> */}
               <Route path="/FinTech/login" element={<LoginForm />} />
               <Route path="/FinTech/signup" element={<RegisterForm />} />
 
