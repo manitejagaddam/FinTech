@@ -65,6 +65,7 @@ function App() {
               {/* <Route path="/FinTech/dashboard" element={<DashboardHome />} /> */}
               <Route path="/FinTech/login" element={<LoginForm />} />
               <Route path="/FinTech/signup" element={<RegisterForm />} />
+              <Route path="/FinTech/loan-products" element={<LoanProductsPage />} />
 
               {/* Protected Routes */}
               <Route 

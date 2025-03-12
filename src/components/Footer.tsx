@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <DollarSign className="w-8 h-8 text-primary-400" />
-              <span className="text-xl font-bold text-white">FinTech</span>
+              <span className="text-xl font-bold text-white">LoanLona</span>
             </div>
             <p className="text-secondary-300 mb-4">
               Providing innovative financial solutions to help you achieve your dreams and secure your future.
@@ -71,8 +71,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
-                <a href="mailto:info@fintech.com" className="text-secondary-300 hover:text-primary-400">
-                  info@fintech.com
+                <a href="mailto:info@LoanLona.com" className="text-secondary-300 hover:text-primary-400">
+                  info@LoanLona.com
                 </a>
               </li>
             </ul>
@@ -105,7 +105,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
           <div className="text-secondary-400 text-sm">
-            &copy; {new Date().getFullYear()} FinTech. All rights reserved.
+            &copy; {new Date().getFullYear()} LoanLona. All rights reserved.
           </div>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
             <Link to="/privacy-policy" className="text-secondary-400 hover:text-primary-400">

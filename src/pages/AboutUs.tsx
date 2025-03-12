@@ -9,9 +9,10 @@ const About = () => {
     <div className="container mx-auto py-12 px-6">
       {/* Hero Section */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-primary-700">About FinTech</h1>
+        <h1 className="text-4xl font-bold text-primary-700">About LoanLona</h1>
         <p className="mt-4 text-secondary-700 text-lg">
-          Empowering individuals and businesses with seamless financial solutions.
+        Empowering individuals and businesses with seamless <b>Lending</b> financial
+        solutions.
         </p>
       </div>
 
@@ -22,8 +23,7 @@ const About = () => {
         </CardHeader>
         <CardContent>
           <p className="text-secondary-700 text-lg">
-            FinTech is a modern financial platform committed to revolutionizing lending and borrowing.
-            Our goal is to simplify financial decisions by providing fast, secure, and transparent loan solutions.
+          LoanLona is a modern financial platform committed to revolutionize lending system of India. Our goal is to simplify Loan Journey by providing fast, accurate, tailored, secure, and transparent loan solutions.
           </p>
         </CardContent>
       </Card>
@@ -36,7 +36,7 @@ const About = () => {
           </CardHeader>
           <CardContent>
             <p className="text-secondary-700 text-lg">
-              To provide accessible, hassle-free, and affordable financial solutions to individuals and businesses.
+              To provide accessible, hassle-free, and affordable Lending solutions to individuals and businesses.
             </p>
           </CardContent>
         </Card>
@@ -46,7 +46,7 @@ const About = () => {
           </CardHeader>
           <CardContent>
             <p className="text-secondary-700 text-lg">
-              A world where financial opportunities are within everyone's reach, powered by technology and innovation.
+            India as a nation where borrowing opportunities are within everyone's reach tailored and quick, powered by technology and innovation.
             </p>
           </CardContent>
         </Card>
@@ -59,7 +59,7 @@ const About = () => {
           {/* Team Member 1 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\mani2.png"
+              src="src\assets\images\sharukh.jpg"
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
@@ -72,7 +72,7 @@ const About = () => {
           {/* Team Member 2 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\mani3.jpg"
+              src="src\assets\images\mani2.png"
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
@@ -85,13 +85,13 @@ const About = () => {
           {/* Team Member 3 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\mani.jpg"
+              src="src\assets\images\vishwanath.jpg"
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
             <CardHeader>
-              <h3 className="text-xl font-semibold text-primary-700">Maniteja Gaddam</h3>
-              <p className="text-secondary-600">Head of Finance</p>
+              <h3 className="text-xl font-semibold text-primary-700">KLS VISHWANATH</h3>
+              <p className="text-secondary-600">CHRO & Co-Founder</p>
             </CardHeader>
           </Card>
         </div>
@@ -101,7 +101,8 @@ const About = () => {
       <div className="mt-12 text-center">
         <h2 className="text-2xl font-semibold text-primary-700">Join Us</h2>
         <p className="text-secondary-700 text-lg mt-2">
-          Want to learn more about how FinTech can help you? Get in touch today!
+        Want to discover how Loanlona can guide Loan Journey in the simplest way?
+        Get in touch ASAP.
         </p>
         <Link to="/contact" className="mt-4 inline-block bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700">
           Contact Us

@@ -281,37 +281,179 @@
 
 // // export default Navbar;
 
+// import { useState } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+// import { Menu, X, ChevronDown, DollarSign } from 'lucide-react';
+
+// const Navbar = ({ user, signOut }) => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+//   const [isProductsOpen, setIsProductsOpen] = useState(false);
+//   const location = useLocation();
+
+//   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+//   const toggleProducts = () => setIsProductsOpen(!isProductsOpen);
+
+//   const isActive = (path) => location.pathname === path;
+
+//   const navLinks = [
+//     { name: 'Home', path: '/FinTech/' },
+//     { name: 'Services', path: '/FinTech/services', dropdown: true },
+//     { name: 'Loan Suggestion', path: '/FinTech/loan-suggestion' },
+//     { name: 'Resources', path: '/FinTech/resources' },
+//     { name: 'About Us', path: '/FinTech/about' },
+//     { name: 'Dashboard', path: '/FinTech/dashboard' },
+    
+//   ];
+
+//   const productLinks = [
+    
+//     { name: 'Dashboard', path: '/FinTech/dashboard' },
+//     { name: 'Personal Loans', path: '/FinTech/services#personal' },
+//     { name: 'Home Loans', path: '/FinTech/services#home' },
+//     { name: 'Auto Loans', path: '/FinTech/services#auto' },
+//     { name: 'Business Loans', path: '/FinTech/services#business' },
+//   ];
+
+//   return (
+//     <nav className="sticky top-0 z-50 bg-white shadow-md">
+//       <div className="container">
+//         <div className="flex items-center justify-between h-16">
+//           {/* Logo */}
+//           <Link to="/FinTech" className="flex items-center space-x-2">
+//             <DollarSign className="w-8 h-8 text-primary-600" />
+//             <span className="text-xl font-bold text-primary-800">Lona Lona</span>
+//           </Link>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden md:flex md:items-center md:space-x-8">
+//             {navLinks.map((link) =>
+//               link.dropdown ? (
+//                 <div key={link.name} className="relative">
+//                   <button 
+//                     onClick={toggleProducts}
+//                     className={`flex items-center space-x-1 px-2 py-1 text-sm font-medium rounded-md ${
+//                       isActive(link.path) ? 'text-primary-600' : 'text-secondary-700 hover:text-primary-600'
+//                     }`}
+//                   >
+//                     <span>{link.name}</span>
+//                     <ChevronDown className="w-4 h-4" />
+//                   </button>
+//                   {isProductsOpen && (
+//                     <div className="absolute left-0 z-10 w-48 mt-2 origin-top-left bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+//                       <div className="py-1">
+//                         {productLinks.map((product) => (
+//                           <Link
+//                             key={product.name}
+//                             to={product.path}
+//                             className="block px-4 py-2 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+//                             onClick={() => setIsProductsOpen(false)}
+//                           >
+//                             {product.name}
+//                           </Link>
+//                         ))}
+//                       </div>
+//                     </div>
+//                   )}
+//                 </div>
+//               ) : (
+//                 <Link
+//                   key={link.name}
+//                   to={link.path}
+//                   className={`px-2 py-1 text-sm font-medium rounded-md ${
+//                     isActive(link.path) ? 'text-primary-600' : 'text-secondary-700 hover:text-primary-600'
+//                   }`}
+//                 >
+//                   {link.name}
+//                 </Link>
+//               )
+//             )}
+//           </div>
+
+//           {/* User Authentication */}
+//           <div className="hidden md:flex md:items-center md:space-x-4">
+//             {user ? (
+//               <>
+//                 <img
+//                   src={user.user_metadata?.avatar_url || "https://via.placeholder.com/50"}
+//                   alt="Profile"
+//                   className="w-12 h-12 rounded-full cursor-pointer"
+//                 />
+//                 <button
+//                   onClick={signOut}
+//                   className="px-4 py-2 bg-red-500 rounded hover:bg-red-600"
+//                 >
+//                   Logout
+//                 </button>
+//               </>
+//             ) : (
+//               <Link to="/FinTech/Login" className="btn-outline btn-sm py-1.5 px-3 rounded-md hover:bg-primary-700 hover:text-white">
+//                 Login
+//               </Link>
+              
+//             )}
+//               <Link to="/FinTech/apply" className="w-full px-4 py-2 text-base font-medium text-center text-white bg-primary-600 rounded-md hover:bg-primary-700">
+//                   Apply Now
+//               </Link>
+//           </div>
+
+//           {/* Mobile Menu Button */}
+//           <div className="flex md:hidden">
+//             <button
+//               onClick={toggleMenu}
+//               className="inline-flex items-center justify-center p-2 text-secondary-500 rounded-md hover:text-secondary-900 hover:bg-secondary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+//             >
+//               <span className="sr-only">Open main menu</span>
+//               {isMenuOpen ? <X className="block w-6 h-6" aria-hidden="true" /> : <Menu className="block w-6 h-6" aria-hidden="true" />}
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, DollarSign } from 'lucide-react';
+import { Menu, X, ChevronRight, ChevronDown, DollarSign } from 'lucide-react';
 
 const Navbar = ({ user, signOut }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isLoansOpen, setIsLoansOpen] = useState(false);
+  const [isLoanTypesOpen, setIsLoanTypesOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleProducts = () => setIsProductsOpen(!isProductsOpen);
+  const toggleLoans = () => setIsLoansOpen(!isLoansOpen);
+  const toggleLoanTypes = () => setIsLoanTypesOpen(!isLoanTypesOpen);
+  const closeLoans = () => {
+    setIsLoansOpen(false);
+    setIsLoanTypesOpen(false);
+  };
 
   const isActive = (path) => location.pathname === path;
 
   const navLinks = [
     { name: 'Home', path: '/FinTech/' },
-    { name: 'Services', path: '/FinTech/services', dropdown: true },
+    { name: 'Loans', dropdown: true },
     { name: 'Loan Suggestion', path: '/FinTech/loan-suggestion' },
     { name: 'Resources', path: '/FinTech/resources' },
     { name: 'About Us', path: '/FinTech/about' },
     { name: 'Dashboard', path: '/FinTech/dashboard' },
-    
   ];
 
-  const productLinks = [
-    
-    { name: 'Dashboard', path: '/FinTech/dashboard' },
+  const loanTypes = [
     { name: 'Personal Loans', path: '/FinTech/services#personal' },
     { name: 'Home Loans', path: '/FinTech/services#home' },
     { name: 'Auto Loans', path: '/FinTech/services#auto' },
     { name: 'Business Loans', path: '/FinTech/services#business' },
+  ];
+
+  const loanServices = [
+    { name: 'Dashboard', path: '/FinTech/dashboard' },
+    { name: 'Loan Repayments', path: '/FinTech/loan-repayments' },
+    { name: 'Loan Tracking', path: '/FinTech/loan-tracking' },
+    { name: 'Loan Calculators', path: '/FinTech/loan-calculators' },
   ];
 
   return (
@@ -321,7 +463,7 @@ const Navbar = ({ user, signOut }) => {
           {/* Logo */}
           <Link to="/FinTech" className="flex items-center space-x-2">
             <DollarSign className="w-8 h-8 text-primary-600" />
-            <span className="text-xl font-bold text-primary-800">Lona Lona</span>
+            <span className="text-xl font-extrabold text-primary-800">LoanLona</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -329,26 +471,62 @@ const Navbar = ({ user, signOut }) => {
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.name} className="relative">
-                  <button 
-                    onClick={toggleProducts}
+                  <button
+                    onClick={toggleLoans}
+                    onMouseEnter={() => setIsLoansOpen(true)}
+                    onMouseLeave={() => setIsLoanTypesOpen(false)}
                     className={`flex items-center space-x-1 px-2 py-1 text-sm font-medium rounded-md ${
-                      isActive(link.path) ? 'text-primary-600' : 'text-secondary-700 hover:text-primary-600'
+                      isActive('/FinTech/loans') ? 'text-primary-600' : 'text-secondary-700 hover:text-primary-600'
                     }`}
                   >
                     <span>{link.name}</span>
                     <ChevronDown className="w-4 h-4" />
                   </button>
-                  {isProductsOpen && (
-                    <div className="absolute left-0 z-10 w-48 mt-2 origin-top-left bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+
+                  {/* Loans Dropdown */}
+                  {isLoansOpen && (
+                    <div
+                      onMouseLeave={closeLoans}
+                      className="absolute left-0 z-10 w-56 mt-2 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
+                    >
                       <div className="py-1">
-                        {productLinks.map((product) => (
-                          <Link
-                            key={product.name}
-                            to={product.path}
-                            className="block px-4 py-2 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
-                            onClick={() => setIsProductsOpen(false)}
+                        <div className="relative group">
+                          <button
+                            onMouseEnter={toggleLoanTypes}
+                            className="flex justify-between w-full px-4 py-2 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
                           >
-                            {product.name}
+                            Loan Types
+                            <ChevronRight className="w-4 h-4" />
+                          </button>
+
+                          {/* Loan Types Submenu */}
+                          {isLoanTypesOpen && (
+                            <div className="absolute top-0 left-full w-56 mt-0 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                              <div className="py-1">
+                                {loanTypes.map((loan) => (
+                                  <Link
+                                    key={loan.name}
+                                    to={loan.path}
+                                    className="block px-4 py-2 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                                    onClick={closeLoans}
+                                  >
+                                    {loan.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Other Loan Services */}
+                        {loanServices.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.path}
+                            className="block px-4 py-2 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                            onClick={closeLoans}
+                          >
+                            {service.name}
                           </Link>
                         ))}
                       </div>
@@ -389,11 +567,13 @@ const Navbar = ({ user, signOut }) => {
               <Link to="/FinTech/Login" className="btn-outline btn-sm py-1.5 px-3 rounded-md hover:bg-primary-700 hover:text-white">
                 Login
               </Link>
-              
             )}
-              <Link to="/FinTech/apply" className="w-full px-4 py-2 text-base font-medium text-center text-white bg-primary-600 rounded-md hover:bg-primary-700">
-                  Apply Now
-              </Link>
+            <Link
+              to="/FinTech/apply"
+              className="w-full px-4 py-2 text-base font-medium text-center text-white bg-primary-600 rounded-md hover:bg-primary-700"
+            >
+              Apply Now
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
