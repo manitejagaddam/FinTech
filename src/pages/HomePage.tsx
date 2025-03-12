@@ -17,11 +17,11 @@ const HomePage = () => {
               Discover personalized loan options with competitive rates and flexible terms to help you achieve your financial goals.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="FinTech/apply" className="btn btn-accent">
+              <Link to="/FinTech/apply" className="btn btn-accent">
                 Apply Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link to="FinTech/loan-suggestion" className="btn btn-outline border-white text-white hover:bg-white/10">
+              <Link to="/FinTech/loan-suggestion" className="btn btn-outline border-white text-white hover:bg-white/10">
                 Find My Loan
               </Link>
             </div>
