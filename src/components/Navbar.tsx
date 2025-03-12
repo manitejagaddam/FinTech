@@ -414,10 +414,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronRight, ChevronDown, DollarSign } from "lucide-react";
-import { useAuth } from "../context/AuthContext"; // ✅ Correct import
+import { useAuth } from "../context/AuthContext";
+import userImage from '../assets/images/user.png';
 
 const Navbar = () => {
-  const { user, signIn, signOut } = useAuth(); // ✅ Correct usage of useAuth()
+  const { user, signIn, signOut } = useAuth(); 
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoansOpen, setIsLoansOpen] = useState(false);
@@ -560,7 +561,7 @@ const Navbar = () => {
               <>
                 <Link to="/FinTech/dashboard">
                   <img
-                    src={"src/assets/images/user.png"}
+                    src={userImage}
                     alt="Profile"
                     className="w-12 h-8 rounded-full cursor-pointer"
                   />

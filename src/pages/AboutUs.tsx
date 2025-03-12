@@ -2,7 +2,9 @@
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardContent } from "../components/ui/Card";
 
-
+import mani from "../assets/images/mani2.png";
+import vishwanath from "../assets/images/vishwanath.jpg";
+import sharukh from "../assets/images/sharukh.jpg";
 
 const About = () => {
   return (
@@ -59,7 +61,7 @@ const About = () => {
           {/* Team Member 1 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\sharukh.jpg"
+              src={sharukh}
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
@@ -72,7 +74,7 @@ const About = () => {
           {/* Team Member 2 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\mani2.png"
+              src={mani}
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
@@ -85,7 +87,7 @@ const About = () => {
           {/* Team Member 3 */}
           <Card className="p-6 shadow-md text-center">
             <img
-              src="src\assets\images\vishwanath.jpg"
+              src={vishwanath}
               alt="Team Member"
               className="w-32 h-32 mx-auto rounded-full"
             />
