@@ -1,5 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Card, CardContent } from "../ui/Card";
+
+import { Bar, Pie } from "react-chartjs-2";
+
+ChartJS.register(
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  ArcElement
+);
 import { 
   FileText, 
   CreditCard, 
@@ -20,6 +33,7 @@ import { LoanApplication, LoanOffer, ActiveLoan } from '../../types';
 import { Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
+  BarElement,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -27,6 +41,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ArcElement
 } from 'chart.js';
 
 ChartJS.register(
@@ -131,6 +146,29 @@ const DashboardHome: React.FC = () => {
     );
   }
 
+  const totalApplications = 3;
+  const totalRepayments = 45000;
+  const barData = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+    datasets: [
+      {
+        label: "Loan Repayments (₹)",
+        data: [2000, 3000, 2500, 4000, 3500],
+        backgroundColor: "#4caf50",
+      },
+    ],
+  };
+
+  const pieData = {
+    labels: ["Personal Loan", "Business Loan", "Home Loan"],
+    datasets: [
+      {
+        data: [40, 30, 30],
+        backgroundColor: ["#f39c12", "#3498db", "#e74c3c"],
+      },
+    ],
+  };
+
   return (
     <div>
       <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
@@ -226,7 +264,7 @@ const DashboardHome: React.FC = () => {
                   <dt className="text-sm font-medium text-gray-500 truncate">Total Balance</dt>
                   <dd className="flex items-baseline">
                     <div className="text-2xl font-semibold text-gray-900">
-                      ${totalRemainingBalance.toLocaleString()}
+                      ₹{totalRemainingBalance.toLocaleString()}
                     </div>
                   </dd>
                 </dl>
@@ -244,6 +282,37 @@ const DashboardHome: React.FC = () => {
       </div>
       
       {/* Loan Balance Chart */}
+      <div className="p-6">
+      <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
+      <div className="grid grid-cols-2 gap-4 mb-6">
+        <Card>
+          <CardContent>
+            <h3 className="text-lg font-semibold">Total Applications</h3>
+            <p className="text-2xl font-bold">{totalApplications}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent>
+            <h3 className="text-lg font-semibold">Total Repayments</h3>
+            <p className="text-2xl font-bold">₹{totalRepayments}</p>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <Card>
+          <CardContent>
+            <h3 className="text-lg font-semibold mb-2">Loan Repayments Over Time</h3>
+            <Bar data={barData} />
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent>
+            <h3 className="text-lg font-semibold mb-2">Loan Type Distribution</h3>
+            <Pie data={pieData} />
+          </CardContent>
+        </Card>
+      </div>
+    </div>
       <div className="mt-8">
         <div className="bg-white shadow rounded-lg p-6">
           <h2 className="text-lg font-medium text-gray-900 mb-4">Loan Balance Overview</h2>
@@ -270,14 +339,14 @@ const DashboardHome: React.FC = () => {
               {applications.length > 0 ? (
                 applications.slice(0, 3).map((application) => (
                   <li key={application.id}>
-                    <Link to={`/dashboard/applications/${application.id}`} className="block hover:bg-gray-50">
+                    <Link to={`/dashboard/applications/₹{application.id}`} className="block hover:bg-gray-50">
                       <div className="px-4 py-4 sm:px-6">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center">
                             <p className="text-sm font-medium text-blue-600 truncate">
                               {application.loan_type.charAt(0).toUpperCase() + application.loan_type.slice(1)} Loan
                             </p>
-                            <div className={`ml-2 flex-shrink-0 inline-block px-2 py-0.5 text-xs font-medium rounded-full ${
+                            <div className={`ml-2 flex-shrink-0 inline-block px-2 py-0.5 text-xs font-medium rounded-full ₹{
                               application.status === 'approved' ? 'bg-green-100 text-green-800' :
                               application.status === 'rejected' ? 'bg-red-100 text-red-800' :
                               'bg-yellow-100 text-yellow-800'
@@ -292,7 +361,7 @@ const DashboardHome: React.FC = () => {
                         <div className="mt-2 sm:flex sm:justify-between">
                           <div className="sm:flex">
                             <p className="flex items-center text-sm text-gray-500">
-                              ${application.loan_amount.toLocaleString()} • {application.loan_term} months
+                              ₹{application.loan_amount.toLocaleString()} • {application.loan_term} months
                             </p>
                           </div>
                           <div className="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
@@ -349,7 +418,7 @@ const DashboardHome: React.FC = () => {
                     </div>
                   </div>
                   <div className="mt-4 sm:mt-0">
-                    <span className="text-xl font-bold text-gray-900">${nextPayment.monthly_payment.toLocaleString()}</span>
+                    <span className="text-xl font-bold text-gray-900">₹{nextPayment.monthly_payment.toLocaleString()}</span>
                   </div>
                 </div>
                 
@@ -357,7 +426,7 @@ const DashboardHome: React.FC = () => {
                   <div className="bg-gray-100 rounded-full overflow-hidden">
                     <div 
                       className="h-2 bg-blue-600 rounded-full" 
-                      style={{ width: `${(1 - (nextPayment.remaining_balance / nextPayment.loan_amount)) * 100}%` }}
+                      style={{ width: `₹{(1 - (nextPayment.remaining_balance / nextPayment.loan_amount)) * 100}%` }}
                     ></div>
                   </div>
                   <div className="mt-2 flex justify-between text-sm text-gray-600">
@@ -368,7 +437,7 @@ const DashboardHome: React.FC = () => {
                 
                 <div className="mt-6">
                   <Link
-                    to={`/dashboard/loans/${nextPayment.id}`}
+                    to={`/dashboard/loans/₹{nextPayment.id}`}
                     className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     View payment details

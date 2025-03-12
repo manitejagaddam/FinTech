@@ -238,7 +238,7 @@ const HomePage = () => {
               Having Queries regarding your Loan Journey?
               Our Interactive AI loan Expert is here for you to discuss all your queries without hesitation.
               </p>
-              <Link to="/loan-suggestion" className="btn btn-accent">
+              <Link to="/FinTech/loan-suggestion" className="btn btn-accent">
                 Try Our Loan Suggestion Tool
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -363,7 +363,7 @@ const HomePage = () => {
             Get in touch ASAP.
             </p>
             <Link
-              to="/contact"
+              to="/FinTech/about"
               className="mt-4 inline-block bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700"
             >
               Contact Us
@@ -481,10 +481,10 @@ const HomePage = () => {
               goals with LoanLona.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/apply" className="btn btn-primary">
+              <Link to="/FinTech/apply" className="btn btn-primary">
                 Apply for a Loan
               </Link>
-              <Link to="/loan-suggestion" className="btn btn-outline">
+              <Link to="/FinTech/loan-suggestion" className="btn btn-outline">
                 Find My Loan
               </Link>
             </div>

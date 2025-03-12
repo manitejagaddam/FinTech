@@ -28,7 +28,8 @@ import LoanApplicationForm from './components/forms/LoanApplicationForm';
 // Auth Components
 import LoginForm from './components/auth/LoginForm';
 import RegisterForm from './components/auth/RegisterForm';
-import LoanRepayments from './pages/LoanRepayment';
+// import LoanTracking from './pages/LoanTracking';
+import LoanTrackings from './pages/LoanTracking';
 
 // Protected Route Component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,7 +68,7 @@ function App() {
               <Route path="/FinTech/login" element={<LoginForm />} />
               <Route path="/FinTech/signup" element={<RegisterForm />} />
               <Route path="/FinTech/loan-products" element={<LoanProductsPage />} />
-              <Route path="/FinTech/loan-repayments" element={<LoanRepayments />} />
+              <Route path="/FinTech/loan-tracking" element={<LoanTrackings />} />
 
               {/* Protected Routes */}
               <Route 
