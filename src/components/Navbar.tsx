@@ -307,7 +307,7 @@ const Navbar = ({ user, signOut }) => {
 
   const productLinks = [
     
-    { name: 'Dashboard', path: '/FinTech/services#dashboard' },
+    { name: 'Dashboard', path: '/FinTech/dashboard' },
     { name: 'Personal Loans', path: '/FinTech/services#personal' },
     { name: 'Home Loans', path: '/FinTech/services#home' },
     { name: 'Auto Loans', path: '/FinTech/services#auto' },

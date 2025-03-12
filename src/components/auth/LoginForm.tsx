@@ -43,7 +43,7 @@ const LoginPage: React.FC = () => {
         localStorage.removeItem("rememberedEmail");
       }
 
-      navigate("/FinTech");
+      navigate("/FinTech/dashboard");
     } catch (err: any) {
       setError(err.message || "Failed to sign in");
     } finally {
