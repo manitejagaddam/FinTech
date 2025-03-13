@@ -37,22 +37,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/loan-products" className="text-secondary-300 hover:text-primary-400">Loan Products</Link>
+                <Link to="/FinTech/loan-products" className="text-secondary-300 hover:text-primary-400">Loan Products</Link>
               </li>
               <li>
-                <Link to="/loan-suggestion" className="text-secondary-300 hover:text-primary-400">Loan Suggestion Tool</Link>
+                <Link to="/FinTech/loan-suggestion" className="text-secondary-300 hover:text-primary-400">Loan Suggestion Tool</Link>
               </li>
               <li>
-                <Link to="/apply" className="text-secondary-300 hover:text-primary-400">Apply for a Loan</Link>
+                <Link to="/FinTech/apply" className="text-secondary-300 hover:text-primary-400">Apply for a Loan</Link>
               </li>
               <li>
-                <Link to="/resources" className="text-secondary-300 hover:text-primary-400">Financial Resources</Link>
+                <Link to="/FinTech/resources" className="text-secondary-300 hover:text-primary-400">Financial Resources</Link>
               </li>
               <li>
-                <Link to="/about" className="text-secondary-300 hover:text-primary-400">About Us</Link>
+                <Link to="/FinTech/about" className="text-secondary-300 hover:text-primary-400">About Us</Link>
               </li>
               <li>
-                <Link to="/dashboard" className="text-secondary-300 hover:text-primary-400">User Dashboard</Link>
+                <Link to="/FinTech/dashboard" className="text-secondary-300 hover:text-primary-400">User Dashboard</Link>
               </li>
             </ul>
           </div>
