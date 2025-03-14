@@ -43,7 +43,7 @@ const Footer = () => {
                 <Link to="/FinTech/loan-suggestion" className="text-secondary-300 hover:text-primary-400">Loan Suggestion Tool</Link>
               </li>
               <li>
-                <Link to="/FinTech/apply" className="text-secondary-300 hover:text-primary-400">Apply for a Loan</Link>
+                <Link to="/FinTech/apply" className="text-secondary-300 hover:text-primary-400">Apply for Loan</Link>
               </li>
               <li>
                 <Link to="/FinTech/resources" className="text-secondary-300 hover:text-primary-400">Financial Resources</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
                 <Link to="/FinTech/about" className="text-secondary-300 hover:text-primary-400">About Us</Link>
               </li>
               <li>
-                <Link to="/FinTech/dashboard" className="text-secondary-300 hover:text-primary-400">User Dashboard</Link>
+                <Link to="/FinTech/dashboard" className="text-secondary-300 hover:text-primary-400">Dashboard</Link>
               </li>
             </ul>
           </div>
@@ -67,12 +67,12 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400" />
-                <span className="text-secondary-300">+91 9494785078</span>
+                <span className="text-secondary-300">+91 949xxxxx78</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
                 <a href="mailto:info@LoanLona.com" className="text-secondary-300 hover:text-primary-400">
-                  info@LoanLona.com
+                  mail@LoanLona.com
                 </a>
               </li>
             </ul>
